@@ -1,14 +1,15 @@
 <?php
+//sumber: https://www.geeksforgeeks.org/how-to-select-and-upload-multiple-files-with-html-and-php-using-http-post/
 
 // Check if form was submitted
 if(isset($_POST['submit'])) {
 
 	// Configure upload directory and allowed file types
 	$upload_dir = 'uploads'.DIRECTORY_SEPARATOR;
-	$allowed_types = array('jpg', 'png', 'jpeg', 'gif', 'docx', 'pdf');
+	$allowed_types = array('docx', 'pdf');
 	
 	// Define maxsize for files i.e 2MB
-	$maxsize = 2 * 1024 * 1024;
+	$maxsize = 5 * 1024 * 1024;
 
 	// Checks if user sent an empty form
 	if(!empty(array_filter($_FILES['files']['name']))) {
@@ -67,5 +68,4 @@ if(isset($_POST['submit'])) {
 		echo "No files selected.";
 	}
 }
-
 ?>
