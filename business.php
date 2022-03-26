@@ -23,7 +23,7 @@
         </div>
         <form action="multi_file_upload.php" method="POST"
             enctype="multipart/form-data">
-            Select files to upload:
+            Select one or more files to upload:
              
             <!-- name of the input fields are going to
                 be used in our php script-->
