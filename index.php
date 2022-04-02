@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,46 +10,50 @@
 </head>
 <body>
     <header> 
-        <div class="heading">
-            <a href="index.php">
-                <h1>Resume Parser</h1>
-            </a>
-
-            <a href="index.php">
-                <h1>Home</h1>
-            </a>
-            <a href="services.php">
-                <h1>Services</h1>
-            </a>
-            <a href="about-us.php">
-                <h1>About us</h1>
-            </a>
-            <a href="contact-us.php">
-                <h1>Contact us</h1>
-            </a>
-        </div>
+            <div class="logo">
+                <a href="index.php"><h1>Resume Parser</h1></a>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about-us.php">About us</a></li>
+                    <li><a href="contact-us.php">Contact us</a></li>
+                </ul>
+            </div>
     </header>
 
     <main>
-        <a href="business.php">
-            <div class = "button">
-                <p>Business</p>
+        <div class = "big-card">
+            <div class = "heading">
+                <h1>Welcome!</h1>
+            </div> 
+            <div class = profile>
+                <div class="card">
+                    <div class="icon"><img src="" alt=""></div>
+                    <a href="business.php">
+                        <p>Business</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="icon"><img src="" alt=""></div>
+                    <a href="personal.php">
+                        <p>Personal</p>
+                    </a>
+                </div>
             </div>
-        </a>
-
-        <a href="personal.php">
-            <div class = "button">
-                <p>Personal</p>
-            </div>
-        </a>
-
+        </div>
+        
     </main>
     
     <footer>
-        
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="about-us.php">About us</a></li>
+            <li><a href="contact-us.php">Contact us</a></li>
+        </ul>
     </footer>
-
-    
 </body>
 
 </html>
