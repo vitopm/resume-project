@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,50 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
     <title>Resume Parser</title>
 </head>
 <body>
     <header> 
-        <div class="heading">
-            <a href="index.php">
-                <h1>Resume Parser</h1>
-            </a>
-
-            <a href="index.php">
-                <h1>Home</h1>
-            </a>
-            <a href="services.php">
-                <h1>Services</h1>
-            </a>
-            <a href="about-us.php">
-                <h1>About us</h1>
-            </a>
-            <a href="contact-us.php">
-                <h1>Contact us</h1>
-            </a>
-        </div>
+            <div class="logo">
+                <a href="index.php"><h1>Resume Parser</h1></a>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about-us.php">About us</a></li>
+                    <li><a href="contact-us.php">Contact us</a></li>
+                </ul>
+            </div>
     </header>
 
     <main>
-        <a href="business.php">
-            <div class = "button">
-                <p>Business</p>
-            </div>
-        </a>
-
-        <a href="personal.php">
-            <div class = "button">
-                <p>Personal</p>
-            </div>
-        </a>
-
+        
+    <div class ="heading">
+            <h1>About us</h1>
+        </div>
+    <p>We provide blablabla</p>
+        
     </main>
     
     <footer>
-        
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="about-us.php">About us</a></li>
+            <li><a href="contact-us.php">Contact us</a></li>
+        </ul>
     </footer>
-
-    
 </body>
 
 </html>

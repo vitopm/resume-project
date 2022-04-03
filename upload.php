@@ -1,51 +1,67 @@
-
 <?php
-$target_dir = "uploads/"; 
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+//sumber: https://www.geeksforgeeks.org/how-to-select-and-upload-multiple-files-with-html-and-php-using-http-post/
 
-// Check if image file is a actual image or fake image
-// if(isset($_POST["submit"])) {
-//   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-//   if($check !== false) {
-//     echo "File is an image - " . $check["mime"] . ".";
-//     $uploadOk = 1;
-//   } else {
-//     echo "File is not an image.";
-//     $uploadOk = 0;
-//   }
-// }
+// Check if form was submitted
+if(isset($_POST['submit'])) {
+	// Configure upload directory and allowed file types
+	$upload_dir = 'uploads'.DIRECTORY_SEPARATOR;
+	$allowed_types = array('docx', 'pdf');
+	
+	// Define maxsize for files
+	$maxsize = 5 * 1024 * 1024;
 
-// Check if file already exists
-if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
-  $uploadOk = 0;
+	// Checks if user sent an empty form
+	if(!empty(array_filter($_FILES['files']['name']))) {
+
+		// Loop through each file in files[] array
+		foreach ($_FILES['files']['tmp_name'] as $key => $value) {
+			$file_tmpname = $_FILES['files']['tmp_name'][$key];
+			$file_name = $_FILES['files']['name'][$key];
+			$file_size = $_FILES['files']['size'][$key];
+			$file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
+			// Set upload file path
+			$filepath = $upload_dir.$file_name;
+
+			// Check file type is allowed or not
+			if(in_array(strtolower($file_ext), $allowed_types)) {
+
+				// Verify file size
+				if ($file_size > $maxsize)		
+					echo "Error: File size is larger than the allowed limit.";
+
+				// If file with name already exist then append time in
+				// front of name of the file to avoid overwriting of file
+				if(file_exists($filepath)) {
+					$filepath = $upload_dir.time().$file_name;
+					
+					if( move_uploaded_file($file_tmpname, $filepath)) {
+						echo "{$file_name} successfully uploaded <br />";
+					}
+					else {					
+						echo "Error uploading {$file_name} <br />";
+					}
+				}
+				else {
+					if( move_uploaded_file($file_tmpname, $filepath)) {
+						echo "{$file_name} successfully uploaded <br />";
+					}
+					else {					
+						echo "Error uploading {$file_name} <br />";
+					}
+				}
+			}
+			else {
+				
+				// If file extension not valid
+				echo "Error uploading {$file_name} ";
+				echo "({$file_ext} file type is not allowed)<br / >";
+			}
+		}
+	}
+	else {
+		
+		// If no files selected
+		echo "No files selected.";
+	}
 }
-
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, your file is too large.";
-  $uploadOk = 0;
-}
-
-// Allow certain file formats
-// if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-// && $imageFileType != "gif" ) {
-//   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-//   $uploadOk = 0;
-// }
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-  } else {
-    echo "Sorry, there was an error uploading your file.";
-  }
-}
-
 ?>

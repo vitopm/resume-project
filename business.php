@@ -6,14 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
     <title>Resume Parser</title>
 </head>
 <body>
-    <header>
-        <div class="heading">
-            <a href="index.php">
-                <h1>Resume Parser</h1>
-            </a>
+    <header> 
+        <div class="logo">
+            <a href="index.php"><h1>Resume Parser</h1></a>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="about-us.php">About us</a></li>
+                <li><a href="contact-us.php">Contact us</a></li>
+            </ul>            
         </div>
     </header>
 
@@ -21,22 +28,21 @@
         <div class="subheading">
             <h2>Business</h2>
         </div>
-        <form action="multi_file_upload.php" method="POST"
+        <form action="upload.php" method="POST"
             enctype="multipart/form-data">
             Select one or more files to upload:
-             
-            <!-- name of the input fields are going to
-                be used in our php script-->
-            <input type="file" name="files[]" multiple>
-            <input type="submit" name="submit" value="Upload" >
+            <input type="file" name="files[]" multiple >
+            <input type="submit" name="submit" value="Upload File" >
         </form>
-
-        
-
     </main>
 
     <footer>
-
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="about-us.php">About us</a></li>
+            <li><a href="contact-us.php">Contact us</a></li>
+        </ul>
     </footer>
 
 </body>

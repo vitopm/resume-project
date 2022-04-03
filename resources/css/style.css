@@ -8,7 +8,7 @@
 }
 
 body{
-    margin: 2rem 3rem 2rem 3rem;
+    margin: 1.5rem 3rem 2rem 3rem;
     font-family: "Inter", sans-serif;
     background-color:#7882A4;
 }
@@ -20,17 +20,31 @@ header{
     justify-content: space-between;
 }
 
-/* .nav-bar  */
+.nav-bar{
+    visibility: visible;
+}
+
 li{
     display: inline-block;
     list-style: none;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 0.5rem;
+    
 }
 
 .heading{
     width: 300px;
     display: flex;
+    flex-direction: column;
+}
+
+.heading h1{
+    margin: 0 0 1rem 0;
+}
+
+.heading h2{
+    margin: 0 0 0 1rem;
 }
 
 .subheading{
@@ -42,7 +56,7 @@ main{
     display: flex;
     flex-direction:column;
     margin: 1.5rem 2rem auto;
-    height: 81vh;
+    height: 80vh;
 }
 
 a{
@@ -60,13 +74,12 @@ a:hover .card{
 }
 
 .big-card{
-    margin: 20% auto;
+    margin: 10% auto;
 }
 
 .card{
     display: flex;
     width: 50px;
-    /* height: 3rem; */
     justify-content: center;
     align-items: center;
     margin: 0 3rem 0 3rem;
@@ -84,15 +97,20 @@ a:hover .card{
     font-size: 1.5rem;
 }
 
-
+footer{
+    visibility: hidden;
+    display: none;
+}
 
 input{
     font-family: "Inter", sans-serif;
+    /* font-size: 2rem; */
+    color: black;
 }
 
 input[type="file"] {
     font-family: "Inter", sans-serif;
-    /* font-size: 30px; */
+    color: #EFEFEF;
 }
 
 input[type="submit"] {

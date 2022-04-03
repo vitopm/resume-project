@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/responsive.css">
     <title>Resume Parser</title>
 </head>
 <body>
-    <header>
-        <div class="heading">
-            <a href="index.php">
-                <h1>Resume Parser</h1>
-            </a>
+    <header> 
+        <div class="logo">
+            <a href="index.php"><h1>Resume Parser</h1></a>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="about-us.php">About us</a></li>
+                <li><a href="contact-us.php">Contact us</a></li>
+            </ul>
         </div>
     </header>
 
@@ -21,16 +32,26 @@
         <div class="subheading">
             <h2>Personal</h2>
         </div>
-        
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select file to upload:
+        <!-- <form action="single_upload.php" method="post" enctype="multipart/form-data">
+            Select one file to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload File" name="submit">
+        </form> -->
+
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+        Select one file to upload:
+            <input type="file" name="files[]" >
+            <input type="submit" name="submit" value="Upload File" >
         </form>
     </main>
     
     <footer>
-
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="about-us.php">About us</a></li>
+            <li><a href="contact-us.php">Contact us</a></li>
+        </ul>
     </footer>
 
 </body>
