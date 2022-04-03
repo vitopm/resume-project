@@ -25,25 +25,8 @@
     </header>
 
     <main>
-        <div class = "big-card">
-            <div class = "heading">
-                <h1>Welcome!</h1>
-                <h2>Choose your profile below</h2>
-            </div> 
-            <div class = profile>
-                <div class="card">
-                    <div class="icon"><img src="" alt=""></div>
-                    <a href="business.php">
-                        <p>Business</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <div class="icon"><img src="" alt=""></div>
-                    <a href="personal.php">
-                        <p>Personal</p>
-                    </a>
-                </div>
-            </div>
+        <div class="heading">
+            <h1>Result</h1>
         </div>
         
     </main>

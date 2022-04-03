@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $page = "personal.php";
+    $_SESSION["source"] = $page;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,18 +34,20 @@
         <div class="subheading">
             <h2>Personal</h2>
         </div>
-        <!-- <form action="single_upload.php" method="post" enctype="multipart/form-data">
-            Select one file to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload File" name="submit">
-        </form> -->
-
+        
         <form action="upload.php" method="POST" enctype="multipart/form-data">
         Select one file to upload:
             <input type="file" name="files[]" >
             <input type="submit" name="submit" value="Upload File" >
         </form>
+
+        <?php if($_SESSION["isError"]):?>
+            <h3><?= $_SESSION["error"] ?></h3>
+        <?php endif;?>
+        
     </main>
+
+    if()
     
     <footer>
         <ul>

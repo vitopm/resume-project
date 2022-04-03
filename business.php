@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $page = "business.php";
+    $_SESSION["source"] = $page;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +38,10 @@
             <input type="file" name="files[]" multiple >
             <input type="submit" name="submit" value="Upload File" >
         </form>
+        
+        <?php if($_SESSION["isError"]):?>
+            <h3><?= $_SESSION["error"] ?></h3>
+        <?php endif;?>
     </main>
 
     <footer>
