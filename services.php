@@ -11,8 +11,8 @@
 </head>
 <body>
     <header> 
-            <div class="logo">
-                <a href="index.php"><h1>Resume Parser</h1></a>
+        <div class="logo">
+            <a href="index.php"><h1>Resume Parser</h1></a>
             </div>
             <div class="nav-bar">
                 <ul>
@@ -27,9 +27,9 @@
     <main>
         
     <div class ="heading">
-            <h1>About us</h1>
+            <h1>Services</h1>
         </div>
-    <p>We provide blablabla</p>
+    <p>We provide services to check resume for both company and personal needs</p>
         
     </main>
     

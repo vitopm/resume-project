@@ -27,8 +27,8 @@
     <main>
         <div class="heading">
             <h1>Result</h1>
-        </div>
-        
+            <p>We currently in the development to process the submitted file. <br> Thank you for your understanding</p>
+        </div>    
     </main>
     
     <footer>

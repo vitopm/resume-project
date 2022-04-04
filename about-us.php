@@ -28,10 +28,7 @@
         <div class ="heading">
             <h1>About us</h1>
         </div>
-
-    
-    <p>We are blablabla</p>
-        
+        <p>We are from BINUS University</p> 
     </main>
     
     <footer>

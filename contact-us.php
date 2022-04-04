@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,12 +24,16 @@
             </div>
     </header>
 
-    <main>
-        
+    <main> 
     <div class ="heading">
-            <h1>Contact us</h1>
-        </div>
-    <p>Here is our contact</p>
+        <h1>Contact us</h1>
+    </div>
+    <p>You may contact us from one of our emails below</p>
+    <ul>
+        <li>vito.minardi@binus.ac.id</li><br>
+        <li>cheryl.almeira@binus.ac.id</li><br>
+        <li>michelle.guntjoro@binus.ac.id</li>
+    </ul>
         
     </main>
     
